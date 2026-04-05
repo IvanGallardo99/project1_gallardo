@@ -7,6 +7,7 @@
     <meta name="description" content="Experience comfort and charm at Cozy Bed & Breakfast. Enjoy relaxing rooms, weekend events, and personalized hospitality for your perfect getaway.">
     <!-- Link to external CSS file -->
     <link href="css/styles.css" rel="stylesheet">
+    <script src="scripts/estimate.js" defer></script>
 </head>
 <body>
 <div id="wrapper">
@@ -26,20 +27,53 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div id="home"></div>
+    <div id="estimate"></div>
 
     <!-- Main content area -->
     <main>
-        <h2>Welcome to Cozy Bed & Breakfast – Your Home Away from Home!</h2>
-        <p> 
-            Nestled in the heart of warmth and charm, Cozy Bed & Breakfast is more than just a place to stay—it's an experience. Whether you're escaping for a weekend getaway, celebrating a special occasion, or simply seeking a peaceful retreat, our welcoming atmosphere and personalized hospitality will make you feel right at home.
-        </p>
-        <p>
-            Wake up to the aroma of freshly brewed coffee, indulge in homemade breakfast delights, and unwind in beautifully curated rooms designed for comfort and relaxation. With local attractions and breathtaking views just outside your door, every stay promises unforgettable memories.
-        </p>
-        <p>
-            Step inside, slow down, and savor the moment. <strong>Your perfect escape starts here.</strong>
-        </p>
+        <h2>Estimate Your Stay</h2>
+        <p> Select options below to estimate your total cost.</p>
+
+        <form class="estimator">
+            <p>
+                <label for="nights">Number of Nights:</label> <br>
+                <input type="number" id="nights" value="1" min="1">
+            </p>
+            
+            <p> Select a Room</p>
+
+            <p>
+                <input type="radio" id="evergreenRoom" name="room" checked>
+                <label for="evergreenRoom">Evergreen Retreat ($120/night)</label>
+            </p>
+
+            <p>
+                <input type="radio" id="gardenRoom" name="room">
+                <label for="gardenRoom">Garden Retreat ($130/night) </label>
+            </p>
+
+            <p>Add-On Features:</p>
+
+            <p>
+                <input type="checkbox" id="breakfast">
+                <label for="breakfast">Breakfast (+$20)</label>
+            </p>
+
+            <p>
+                <input type="checkbox" id="parking">
+                <label for="parking">Parking (+$15)</label>
+            </p>
+
+            <p>
+                <input type="checkbox" id="wifi">
+                <label for="wifi">Premium Wi-Fi (+$10)</label>
+            </p>
+
+            <p>
+                <input type="button" id="estimateButton" value="Calculate Estimate">
+            </p>
+        </form> 
+        <h3> Total Estimate: <span id="totalCost">$0.00</span></h3>
     </main>
 
     <!-- Footer with copyright and contact email -->
