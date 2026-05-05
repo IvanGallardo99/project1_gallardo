@@ -344,5 +344,23 @@ body {
     color: #567A56;
 }
 
+/* Store product images */
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
 
+    .product img {
+        width: 160px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+.product-info {
+    max-width: 60%;
+}
 

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cozy Bed & Breakfast - Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop cozy gifts and guest favorites from Cozy Bed & Breakfast.">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="scripts/store.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Cozy Bed & Breakfast</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms/evergreen_retreat.html">Evergreen Retreat</a></li>
+                <li><a href="rooms/garden_retreat.html">Garden Retreat</a></li>
+                <li><a href="events/weekend_events.html">Weekend Events</a></li>
+                <li><a href="estimate.html">Estimate Cost</a></li>
+                <li><a href="reviews.html">Guest Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Cozy Gift Shop</h2>
+            <p>Choose from our guest favorites and add items to your cart.</p>
+
+            <section id="products">
+                <div class="product">
+                    <img src="images/robe.png" alt="Cozy robe">
+                    <h3>Cozy Robe</h3>
+                    <p>Soft robe perfect for relaxing after a peaceful stay.</p>
+                    <p>$45.00</p>
+                    <input type="button" value="Add to Cart" data-name="Cozy Robe" data-price="45">
+                </div>
+
+                <div class="product">
+                    <img src="images/basket.png" alt="Breakfast gift basket">
+                    <h3>Breakfast Gift Basket</h3>
+                    <p>A small basket with coffee, muffins, jam, and treats.</p>
+                    <p>$35.00</p>
+                    <input type="button" value="Add to Cart" data-name="Breakfast Gift Basket" data-price="35">
+                </div>
+
+                <div class="product">
+                    <img src="images/candle.png" alt="Scented candle">
+                    <h3>Scented Candle</h3>
+                    <p>A relaxing candle with a warm cozy room scent.</p>
+                    <p>$18.00</p>
+                    <input type="button" value="Add to Cart" data-name="Scented Candle" data-price="18">
+                </div>
+
+                <div class="product">
+                    <img src="images/blanket.png" alt="Cozy blanket">
+                    <h3>Cozy Blanket</h3>
+                    <p>A warm throw blanket for relaxing at home.</p>
+                    <p>$55.00</p>
+                    <input type="button" value="Add to Cart" data-name="Cozy Blanket" data-price="55">
+                </div>
+
+                <div class="product">
+                    <img src="images/mug.png" alt="Coffee mug">
+                    <h3>Coffee Mug</h3>
+                    <p>A simple mug for enjoying your morning coffee.</p>
+                    <p>$15.00</p>
+                    <input type="button" value="Add to Cart" data-name="Coffee Mug" data-price="15">
+                </div>
+            </section>
+
+            <section id="cartArea">
+                <h2>Your Cart</h2>
+                <table id="cartTable">
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </table>
+                <p>Total: <span id="cartTotal">$0.00</span></p>
+            </section>
+
+            <section id="customerInfo">
+                <h2>Customer Information</h2>
+                <form id="storeForm" action="formsubmit.html" method="get" novalidate>
+                <h3> Order Summary</h3>
+                <textarea id="orderSummary" name="orderSummary" readonly></textarea>
+                    <p>
+                        <label for="firstName">First Name *</label><br>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </p>
+
+                    <p>
+                        <label for="lastName">Last Name *</label><br>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email *</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <h3>Billing Address</h3>
+
+                    <p>
+                        <label for="billingAddress">Billing Address *</label><br>
+                        <input type="text" id="billingAddress" name="billingAddress" required>
+                    </p>
+
+                    <p>
+                        <label for="billingCity">Billing City *</label><br>
+                        <input type="text" id="billingCity" name="billingCity" required>
+                    </p>
+
+                    <p>
+                        <label for="billingZip">Billing Postal Code *</label><br>
+                        <input type="text" id="billingZip" name="billingZip" required>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="sameShipping">
+                        <label for="sameShipping">Shipping is same as billing</label>
+                    </p>
+
+                    <h3>Shipping Address</h3>
+
+                    <p>
+                        <label for="shippingAddress">Shipping Address</label><br>
+                        <input type="text" id="shippingAddress" name="shippingAddress">
+                    </p>
+
+                    <p>
+                        <label for="shippingCity">Shipping City</label><br>
+                        <input type="text" id="shippingCity" name="shippingCity">
+                    </p>
+
+                    <p>
+                        <label for="shippingZip">Shipping Postal Code</label><br>
+                        <input type="text" id="shippingZip" name="shippingZip">
+                    </p>
+                    <p id="storeError"></p>
+
+                    <input type="submit" value="Checkout">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            Copyright &copy; 2025 WebMaster<br>
+            <a href="mailto:igallardo@amarillocollege.com">Ivan Gallardo</a><br>
+            <script>
+            document.write("This page was last modified on: " + document.lastModified);
+            </script>
+        </footer>
+    </div>
+</body>
+</html>
