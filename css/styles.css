@@ -364,3 +364,22 @@ body {
     max-width: 60%;
 }
 
+#locationWeather {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.mapContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.weatherContainer {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+

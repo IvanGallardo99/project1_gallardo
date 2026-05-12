@@ -26,7 +26,6 @@ function addToCart() {
     };
 
     cart.push(item);
-    alert(name + " added to cart!");
     displayCart();
 }
 
